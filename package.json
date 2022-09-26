@@ -29,12 +29,12 @@
   "scripts": {
     "prepublish": "make js",
     "postpublish": "make clean",
+    "postinstall": "npx coffee -c browser.coffee src/*.coffee src/**/*.coffee src/**/**/*.coffee",
     "test": "make test"
   },
   "engine": [
     "node >= v0.6.0"
   ],
-  "main": "./node",
   "browserify": {
     "transform": [
       "coffeeify"
@@ -44,5 +44,7 @@
     "./node": "./browser.coffee",
     "./src/sources/node/file": "./src/sources/browser/file.coffee",
     "./src/sources/node/http": "./src/sources/browser/http.coffee"
-  }
+  },
+  "main": "./browser.js",
+  "types": "./types/index.d.ts"
 }
