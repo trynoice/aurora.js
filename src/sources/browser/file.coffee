@@ -3,6 +3,7 @@ AVBuffer = require '../../core/buffer'
 
 class FileSource extends EventEmitter
     constructor: (@file) ->
+        super()
         if not FileReader?
             return @emit 'error', 'This browser does not have FileReader support.'
         

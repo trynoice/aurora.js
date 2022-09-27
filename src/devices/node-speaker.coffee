@@ -11,6 +11,7 @@ class NodeSpeakerDevice extends EventEmitter
     @supported: Speaker?
     
     constructor: (@sampleRate, @channels) ->
+        super()
         @speaker = new Speaker
             channels: @channels
             sampleRate: @sampleRate

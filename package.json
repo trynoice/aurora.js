@@ -12,24 +12,22 @@
     "url": "https://github.com/audiocogs/aurora.js.git"
   },
   "bugs": "https://github.com/audiocogs/aurora.js/issues",
-  "dependencies": {
-    "coffeeify": "^0.6.0"
-  },
   "optionalDependencies": {
-    "speaker": "^0.3.0"
+    "speaker": "^0.5.4"
   },
   "devDependencies": {
-    "browserify": "^13.0.1",
-    "coffee-script": ">=1.0",
-    "exorcist": "^0.1.6",
-    "mocha": "^2.5.3",
-    "mochify": "^2.18.0",
-    "node-static": "^0.7.7"
+    "browserify": "^17.0.0",
+    "coffeeify": "^3.0.1",
+    "coffeescript": "^2.7.0",
+    "exorcist": "^2.0.0",
+    "mocha": "^10.0.0",
+    "mochify": "^9.2.0",
+    "node-static": "^0.7.11"
   },
   "scripts": {
     "prepublish": "make js",
     "postpublish": "make clean",
-    "postinstall": "npx coffee -c browser.coffee src/*.coffee src/**/*.coffee src/**/**/*.coffee",
+    "prepare": "coffee -c .",
     "test": "make test"
   },
   "engine": [

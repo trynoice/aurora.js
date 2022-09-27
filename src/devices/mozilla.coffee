@@ -8,7 +8,8 @@ class MozillaAudioDevice extends EventEmitter
     # determine whether this device is supported by the browser
     @supported: Audio? and 'mozWriteAudio' of new Audio
     
-    constructor: (@sampleRate, @channels) ->        
+    constructor: (@sampleRate, @channels) ->
+        super()        
         @audio = new Audio
         @audio.mozSetup(@channels, @sampleRate)
         
