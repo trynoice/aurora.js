@@ -35,6 +35,7 @@ declare namespace AV {
         on(event: "decodeStart", fn: () => void): void;
         on(event: "data", fn: (data: Float32Array) => void): void;
         on(event: "error", fn: (err: Error) => void): void;
+        on(event: "end", fn: () => void): void;
 
         off(event: "buffer", fn: (percent: number) => void): void;
         off(event: "format", fn: (object: Format) => void): void;
@@ -51,6 +52,7 @@ declare namespace AV {
         once(event: "decodeStart", fn: () => void): void;
         once(event: "data", fn: (data: Float32Array) => void): void;
         once(event: "error", fn: (err: Error) => void): void;
+        once(event: "end", fn: () => void): void;
 
         emit(event: "buffer", fn: (percent: number) => void): void;
         emit(event: "format", fn: (object: Format) => void): void;
